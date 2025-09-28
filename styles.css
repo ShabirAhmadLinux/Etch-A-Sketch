@@ -1,0 +1,19 @@
+.container{
+    height: 960px;
+    width:960px;
+    background-color: rgb(255, 255, 254);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.rowdiv{
+    display: flex;
+    flex: 1;
+}
+.cell{
+    flex:1;
+    border:1px solid black;
+}
+.cell:hover{
+    background-color: greenyellow;
+}
