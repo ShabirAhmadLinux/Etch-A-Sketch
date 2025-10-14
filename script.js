@@ -25,3 +25,18 @@ gridSizeButton.addEventListener('click',e=>{
     alert("Dude it should be a number between 0 to 100");
   }
 });
+
+    function changeBackground(e){
+     
+        if(e.target.className==="cell"){
+          e.target.style.backgroundColor="green";
+        }
+    }
+    sketchPad.addEventListener("mousedown",()=>{
+      sketchPad.addEventListener("mouseover",changeBackground);
+      sketchPad.addEventListener("mouseup",()=>{
+        sketchPad.removeEventListener("mouseover",changeBackground);
+      });
+    });
+  
+     

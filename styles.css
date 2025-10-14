@@ -14,6 +14,3 @@
     flex:1;
     border:1px solid black;
 }
-.cell:hover{
-    background-color: greenyellow;
-}
