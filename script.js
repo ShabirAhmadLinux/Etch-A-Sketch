@@ -12,7 +12,7 @@ function createGrid(n = 16) {
 }
 
 let sketchPad = document.querySelector(".sketchpad");
-let gridSizeButton = document.querySelector(".gridSizeButton")
+let gridSizeButton = document.querySelector(".gridSize")
 createGrid();
 gridSizeButton.addEventListener('click', e => {
   let num = parseInt(prompt("Enter number(0 to 100) for number x number grid"));
@@ -39,7 +39,7 @@ function random() {
   return Math.floor(Math.random() * 256);
 }
 
-let defaultButton = document.querySelector(".defaultModeButton");
+let defaultButton = document.querySelector(".defaultMode");
 defaultButton.addEventListener("click", () => {
   changeBackground = function (e) {
 
@@ -50,7 +50,7 @@ defaultButton.addEventListener("click", () => {
 });
 
 
-let colorfulButton = document.querySelector(".colorfulModeButton");
+let colorfulButton = document.querySelector(".colorfulMode");
 colorfulButton.addEventListener("click", () => {
   changeBackground = function (e) {
     if (e.target.className === "cell") {
@@ -64,7 +64,19 @@ colorfulButton.addEventListener("click", () => {
 });
 
 
-
+let shadeModeButton = document.querySelector(".shadeMode");
+shadeModeButton.addEventListener("click", () => {
+  changeBackground = function (e) {
+    if (e.target.className = "cell") {
+      e.target.style.backgroundColor = "black";
+      if (e.target.opacity === undefined) {
+        e.target.opacity = 0.1;
+      }
+      e.target.style.opacity = e.target.opacity;
+      e.target.opacity += 0.1;
+    }
+  }
+});
 
 
 sketchPad.addEventListener("mousedown", (e) => {
